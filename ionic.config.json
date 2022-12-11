@@ -1,0 +1,7 @@
+{
+  "name": "CopaProcer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
