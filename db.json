@@ -1,0 +1,30 @@
+{
+  "jogador": [
+    {
+      "id": 1,
+      "nome": "Rafael Oliveira",
+      "dataNascimento": "1985-01-09",
+      "funcao": "Patrão",
+      "exerceAtividadeFisica": false,
+      "qtdeVezesSemana": "7",
+      "praticaEsporte": false
+    },
+    {
+      "id": 2,
+      "nome": "Matheus",
+      "dataNascimento": "2022-01-01",
+      "funcao": "rewsr",
+      "exerceAtividadeFisica": false,
+      "qtdeVezesSemana": "3",
+      "praticaEsporte": true
+    },
+    {
+      "id": 3,
+      "nome": "Andre",
+      "dataNascimento": "1985-02-22",
+      "funcao": "nao sei",
+      "qtdeVezesSemana": "1",
+      "exerceAtividadeFisica": true
+    }
+  ]
+}

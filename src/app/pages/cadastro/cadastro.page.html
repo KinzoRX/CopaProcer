@@ -1,64 +1,65 @@
 <ion-header>
-  <ion-content [fullscreen]="true"> 
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-    <ion-menu-button></ion-menu-button>
-  </ion-buttons>
-   <ion-title>Cadastro</ion-title>
-  </ion-toolbar>
-
-
-  <ion-img src= "/assets/Copa.jpeg"></ion-img>
-
-
-
-  <ion-item>
-    <ion-label position="floating">Nome</ion-label>
-    <ion-input placeholder="Digite aqui"></ion-input>
-  </ion-item>
-  
-  <ion-item fill="solid">
-    <ion-label position="floating">Data de nascimento</ion-label>
-    <ion-input placeholder="Digite aqui"></ion-input>
-  </ion-item>
-  
-  <ion-item fill="outline">
-    <ion-label position="floating">Função</ion-label>
-    <ion-input placeholder="Digite aqui"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Exerce atividade fisica?</ion-label>
-    <ion-button fill="start">
-      Sim
-    </ion-button>
-        <ion-button fill="end">
-      Não
-    </ion-button>
-  </ion-item>
-
-  <ion-item fill="outline">
-    <ion-label position="floating">Quantas vezes por semana?</ion-label>
-    <ion-input placeholder="Digite aqui"></ion-input>
-  </ion-item>
-
-
-  <ion-item>
-        <ion-label>Costuma praticar algum esporte?</ion-label>
-        <ion-button fill="start">
-          Sim
-        </ion-button>
-            <ion-button fill="end">
-          Não
-        </ion-button>
-            </ion-item>
-
-          </ion-content>
-        </ion-header>
-        
-  <ion-footer>
-    <ion-toolbar color="secondary">
-      <ion-title></ion-title>
+  <ion-content [fullscreen]="true">
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Cadastro</ion-title>
     </ion-toolbar>
-  </ion-footer>
-  
+
+
+    <ion-img src="/assets/Copa.jpeg"></ion-img>
+
+
+
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input placeholder="Digite aqui" [(ngModel)]="jogador.nome"></ion-input>
+    </ion-item>
+
+    <ion-item fill="solid">
+      <ion-label position="floating">Data de nascimento</ion-label>
+      <ion-input placeholder="Digite aqui" type="date" [(ngModel)]="jogador.dataNascimento"></ion-input>
+    </ion-item>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Função</ion-label>
+      <ion-input placeholder="Digite aqui" [(ngModel)]="jogador.funcao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Exerce atividade fisica?</ion-label>
+      <ion-button fill="start" (click)="exercerAtividadeFisica(true)" [ngClass]="jogador.exerceAtividadeFisica? 'checkAzul' : 'checkPreto'">
+        Sim
+      </ion-button>
+      <ion-button fill="end" (click)="exercerAtividadeFisica(false)" [ngClass]="!jogador.exerceAtividadeFisica ? 'checkAzul' : 'checkPreto'">
+        Não
+      </ion-button>
+    </ion-item>
+
+    <ion-item fill="outline">
+      <ion-label position="floating">Quantas vezes por semana?</ion-label>
+      <ion-input placeholder="Digite aqui" [(ngModel)]="jogador.qtdeVezesSemana"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Costuma praticar algum esporte?</ion-label>
+      <ion-button fill="start" (click)="praticarEsporte(true)"  [ngClass]="jogador.praticaEsporte? 'checkAzul' : 'checkPreto'">
+        Sim
+      </ion-button>
+      <ion-button fill="end" (click)="praticarEsporte(false)"  [ngClass]="!jogador.praticaEsporte? 'checkAzul' : 'checkPreto'">
+        Não
+      </ion-button>
+    </ion-item>
+
+    <ion-button  (click)="gravar()">Gravar</ion-button>
+
+  </ion-content>
+</ion-header>
+
+<ion-footer>
+  <ion-toolbar color="secondary">
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-footer>
